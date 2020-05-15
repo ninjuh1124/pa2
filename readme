@@ -1,19 +1,12 @@
-So I did something a little bit different with my choose function. Instead 
-of using a recursive factorial function and plugging that into the nCr 
-function, I used a recursive nCr function I found on Wikipedia. The 
-algorithm runs in O(2^n) time with regards to the magnitude of n and r, 
-which, while MUCH slower than using the factorial formula, does allow for 
-a larger range of numbers (or at the very least, what I can do writing 
-assembly code from scratch). Time efficiency aside, the algorithm only uses 
-O(n) space, taking only 4 bytes more per recursive call than what the 
+So I did something a little bit different with my choose function. Instead of using a recursive factorial function and plugging that into the nCr 
+function, I used a recursive nCr function I found on Wikipedia. The algorithm runs in O(2^n) time with regards to the magnitude of n and r, 
+which, while MUCH slower than using the factorial formula, does allow for a larger range of numbers (or at the very least, what I can do writing 
+assembly code from scratch). Time efficiency aside, the algorithm only uses O(n) space, taking only 4 bytes more per recursive call than what the 
 factorial algorithm would have used. 
 
-The only thing I really had trouble with was getting the execution time. 
-I had trouble working with gettimeofday(), and even with the marginally 
-better clock(), I still had trouble retrieving an appreciable value to 
-print. I've left the measurement in seconds as it makes the value more 
+The only thing I really had trouble with was getting the execution time. I had trouble working with gettimeofday(), and even with the marginally 
+better clock(), I still had trouble retrieving an appreciable value to print. I've left the measurement in seconds as it makes the value more 
 accurate.
 
-I've only tested up to input values of 35, and they all work, albeit, at 
-that point it takes a couple of minutes to execute, so I stopped testing 
+I've only tested up to input values of 35, and they all work, albeit, at that point it takes a couple of minutes to execute, so I stopped testing 
 higher values for the sake of my patience. 
