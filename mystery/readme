@@ -1,0 +1,16 @@
+I'll be honest, Prof Russel gave it away when he named the method 
+"compute_fib". Everything after that was writing and compiling increasingly
+complex C and seeing what they looked like in assembly, and then matching 
+those patterns until I got roughly what the mystery file was. The for loop 
+in main was the easiest thing to identify being that it constantly 
+incremented an internal autovariable and jumped out of the loop when it hit
+a certain number. Figuring out that n was an integer array outside of any 
+of the methods took the longest to figure out, because I didn't think that 
+the writer of the program would be that careless.
+
+As far as optimization goes, it looks like gcc prioritizes moving values 
+into registers whenever possible, and storing things into memory if the 
+value is going to be used outside the scope of the method. There's also 
+a few mnemonics we didn't go over in class, such as "leal", which I can 
+only assume is an extremely convenient way of doing something that's hard 
+to explain, as far as StackExchange is able to tell me.
